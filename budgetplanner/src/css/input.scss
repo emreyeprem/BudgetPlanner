@@ -6,11 +6,6 @@ $sizes: (
    fontone: 20px,
    fontzero: 14px,
 );
-
-$font-styles: (
-  sidebarFont :'Comfortaa',
-
-);
 .body {
    position: absolute;
    left: 0;
@@ -18,7 +13,8 @@ $font-styles: (
    background-image: map-get($colors,background);
    height: 100%;
    width: 100%;
-   font-family: map-get($font-styles,sidebarFont);
+   font-family: 'Comfortaa', cursive;
+
   }
 
   .card {
@@ -39,8 +35,88 @@ $font-styles: (
    -ms-border-radius: 5px;
    -o-border-radius: 5px;
    box-shadow: 0 0 20px black;
+   display:flex;
+
 
   }
 .sidenav---sidenav---_2tBP{
    background-color: map-get($colors,sidebar) !important;
+}
+.sidenav---collapsed---LQDEv{
+  width: fit-content !important;
+}
+.sidenav---expanded---1KdUL{
+  width: 16% !important;
+}
+.inputDiv{
+   width: 75%;
+   height: 90%;
+
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   display:flex;
+   justify-content: center;
+
+}
+.inputContainer{
+  width: 95%;
+  height: 10vh;
+  position:relative;
+
+  margin-top: 20px;
+}
+.sidenav---navtext---1AE_f{
+   margin-left: 20px;
+}
+.sidenav---navtext---1AE_f:hover{
+  transform:scale(1.2);
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -ms-transform:scale(1.2);
+  -o-transform:scale(1.2);
+}
+.sidenav---navitem---9uL5T{
+   width: 64px;
+
+}
+.withoutmargin{
+  margin-left: 3%;
+}
+.withmargin{
+margin-left: 15%;
+}
+.amount{
+   height: 30px;
+   width: 40%;
+   background: transparent;
+   border:solid;
+   margin-top: 10px;
+   margin-left: 10px;
+   border-color: map-get($colors,sidebar);
+   border-radius:10px;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   -ms-border-radius:10px;
+   -o-border-radius:10px;
+   font-size: 1rem;
+   box-shadow: 0 0 10px black;
+  outline:none;
+}
+.submit{
+   height: 30px;
+   width: 10%;
+   border:solid;
+   margin-top: 15px;
+   margin-left: 10px;
+   border-color: map-get($colors,sidebar);
+   border-radius:10px;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   -ms-border-radius:10px;
+   -o-border-radius:10px;
+   font-size: 1rem;
+   box-shadow: 0 0 10px black;
+   outline:none;
 }
