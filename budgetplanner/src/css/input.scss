@@ -1,10 +1,46 @@
-$background : linear-gradient(to right, rgb(255, 102, 153),rgb(255, 153, 153),#ffcccc, #ffe6);
+$colors: (
+   background : linear-gradient(to left, rgb(255, 102, 153),rgb(255, 153, 153),#ffcccc),
+   sidebar:  rgb(255, 102, 153),
+);
+$sizes: (
+   fontone: 20px,
+   fontzero: 14px,
+);
 
-.body{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: $background;
-    height: 100vh;
-    width: 100%;
+$font-styles: (
+  sidebarFont :'Comfortaa',
+
+);
+.body {
+   position: absolute;
+   left: 0;
+   top: 0;
+   background-image: map-get($colors,background);
+   height: 100%;
+   width: 100%;
+   font-family: map-get($font-styles,sidebarFont);
+  }
+
+  .card {
+   position: absolute;
+   width: 94%;
+   height: 94%;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   -o-transform: translate(-50%, -50%);
+   background-color: #ffcccc;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+   box-shadow: 0 0 20px black;
+
+  }
+.sidenav---sidenav---_2tBP{
+   background-color: map-get($colors,sidebar) !important;
 }

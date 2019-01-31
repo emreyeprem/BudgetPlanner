@@ -1,9 +1,32 @@
 .body {
   position: absolute;
+  left: 0;
   top: 0;
-  right: 0;
-  background-image: linear-gradient(to right, #ff6699, #ff9999, #ffcccc, #ffe6);
-  height: 100vh;
-  width: 100%; }
+  background-image: linear-gradient(to left, #ff6699, #ff9999, #ffcccc);
+  height: 100%;
+  width: 100%;
+  font-family: "Comfortaa"; }
+
+.card {
+  position: absolute;
+  width: 94%;
+  height: 94%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: #ffcccc;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 0 20px black; }
+
+.sidenav---sidenav---_2tBP {
+  background-color: #ff6699 !important; }
 
 /*# sourceMappingURL=output.css.map */
