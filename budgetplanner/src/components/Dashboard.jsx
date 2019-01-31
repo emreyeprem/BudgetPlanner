@@ -12,7 +12,7 @@ class Dashboard extends Component{
         super(props)
         this.state = {
          expenses : [],
-          class:'inputContainer withoutmargin'
+          class:'inputContainer withoutmargin hide'
         }
       }
  componentDidMount = ()=> {
@@ -28,25 +28,29 @@ render() {
         
           <SideNav
     onSelect={(selected) => {
-        // Add your code here
+        console.log(selected)
+        this.setState({
+            ...this.state,
+            item : selected
+        })
+        if(this.state.class=="inputContainer withoutmargin hide"){
+            this.setState({
+                ...this.state,
+                class: 'inputContainer'
+            })}
     }}
     onToggle={()=>{
         
-        if(this.state.class=="inputContainer withoutmargin"){
-        this.setState({
-            ...this.state,
-            class: 'inputContainer withmargin'
-        })} else{
             this.setState({
                 ...this.state,
-                class: 'inputContainer withoutmargin'
+                class: 'inputContainer withoutmargin hide'
             })
-        }
+       
     }}
 >
     <SideNav.Toggle />
     <SideNav.Nav defaultSelected="">
-        <NavItem eventKey="home" active>
+        <NavItem eventKey="Rent/Mortgage" active>
             <NavIcon>
                 <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
             </NavIcon>
@@ -54,7 +58,7 @@ render() {
                 Rent/Morgage
             </NavText>
         </NavItem >
-        <NavItem eventKey="charts" active>
+        <NavItem eventKey="Grocery" active>
             <NavIcon>
                 <i className="fas fa-shopping-basket" style={{ fontSize: '1.75em' }} />
             </NavIcon>
@@ -62,15 +66,15 @@ render() {
                 Grocery
             </NavText>
             </NavItem >
-            <NavItem active>
+            <NavItem eventKey="Car Expenses" active>
             <NavIcon>
                 <i className="fas fa-car" style={{ fontSize: '1.75em' }} />
             </NavIcon>
             <NavText>
                 Car Expenses
             </NavText>
-            </NavItem>
-            <NavItem active>
+            </NavItem> 
+            <NavItem eventKey="Health" active>
             <NavIcon>
                 <i className="fas fa-briefcase-medical" style={{ fontSize: '1.75em' }} />
             </NavIcon>
@@ -78,7 +82,7 @@ render() {
                 Health
             </NavText>
             </NavItem>
-            <NavItem active>
+            <NavItem eventKey="Entertainment" active>
             <NavIcon>
                 <i className="fas fa-bowling-ball" style={{ fontSize: '1.75em' }} />
             </NavIcon>
@@ -86,7 +90,7 @@ render() {
                 Entertainment
             </NavText>
             </NavItem>
-            <NavItem active>
+            <NavItem eventKey="Utility Bills" active>
             <NavIcon>
                 <i className="fas fa-file-invoice-dollar" style={{ fontSize: '1.75em' }} />
             </NavIcon>
@@ -94,7 +98,7 @@ render() {
                 Utility Bills
             </NavText>
             </NavItem>
-            <NavItem active>
+            <NavItem eventKey="Personal Care" active>
             <NavIcon>
                 <i className="fas fa-user-alt" style={{ fontSize: '1.75em' }} />
             </NavIcon>
@@ -102,7 +106,7 @@ render() {
                 Personal Care
             </NavText>
             </NavItem>
-            <NavItem active>
+            <NavItem eventKey="Education/Training" active>
             <NavIcon>
                 <i className="fas fa-graduation-cap" style={{ fontSize: '1.75em' }} />
             </NavIcon>
@@ -110,7 +114,7 @@ render() {
                 Education/Training
             </NavText>
             </NavItem>
-            <NavItem active>
+            <NavItem eventKey="Other" active>
             <NavIcon>
                 <i className="fas fa-angle-double-right" style={{ fontSize: '1.75em' }} />
             </NavIcon>
@@ -122,7 +126,7 @@ render() {
 </SideNav>
 <div className={this.state.class}>
           <div className="inputDiv">
-          <h3>Enter Amount:</h3>
+          <h4>Enter {this.state.item} Amount:</h4>
           <input className="amount" type="text" placeholder="$"/>
           <button className="submit">Submit</button>
           </div>

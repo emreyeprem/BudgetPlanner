@@ -68,9 +68,6 @@
 .withoutmargin {
   margin-left: 3%; }
 
-.withmargin {
-  margin-left: 15%; }
-
 .amount {
   height: 30px;
   width: 40%;
@@ -103,5 +100,8 @@
   font-size: 1rem;
   box-shadow: 0 0 10px black;
   outline: none; }
+
+.hide {
+  display: none; }
 
 /*# sourceMappingURL=output.css.map */

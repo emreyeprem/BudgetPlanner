@@ -64,7 +64,6 @@ $sizes: (
   width: 95%;
   height: 10vh;
   position:relative;
-
   margin-top: 20px;
 }
 .sidenav---navtext---1AE_f{
@@ -84,9 +83,9 @@ $sizes: (
 .withoutmargin{
   margin-left: 3%;
 }
-.withmargin{
-margin-left: 15%;
-}
+// .withmargin{
+// margin-left: 15%;
+// }
 .amount{
    height: 30px;
    width: 40%;
@@ -119,4 +118,7 @@ margin-left: 15%;
    font-size: 1rem;
    box-shadow: 0 0 10px black;
    outline:none;
+}
+.hide{
+    display: none;
 }
