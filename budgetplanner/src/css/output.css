@@ -25,7 +25,8 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   box-shadow: 0 0 20px black;
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
 
 .sidenav---sidenav---_2tBP {
   background-color: #ff6699 !important; }
@@ -50,7 +51,10 @@
   width: 95%;
   height: 10vh;
   position: relative;
-  margin-top: 20px; }
+  margin-left: 1%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; }
 
 .sidenav---navtext---1AE_f {
   margin-left: 20px; }
@@ -65,8 +69,27 @@
 .sidenav---navitem---9uL5T {
   width: 64px; }
 
-.withoutmargin {
-  margin-left: 3%; }
+.graphDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-left: 5%;
+  align-items: center; }
+
+.barDiv {
+  width: 50%;
+  height: auto; }
+
+.pieDiv {
+  width: 50%;
+  height: auto;
+  margin-top: -40px;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8); }
 
 .amount {
   height: 30px;
@@ -87,7 +110,7 @@
 
 .submit {
   height: 30px;
-  width: 10%;
+  width: 90px;
   border: solid;
   margin-top: 15px;
   margin-left: 10px;
